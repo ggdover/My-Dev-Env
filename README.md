@@ -17,7 +17,7 @@ Ability to view size of repository on github in webbrowser before cloning it.
 
 ## Cmder (terminal emulator for Windows)
 
-[Link to repo](https://github.com/cmderdev/cmder)
+[Link to repo](https://github.com/cmderdev/cmder)<br/>
 [Link to website](https://cmder.net/)
 
 ## iTerm (terminal emulator for OSX)
