@@ -9,6 +9,10 @@ e.g. .md files, Like this one! :D
 
 ## Stand-alone keyboard shortcuts
 
+### Platform indipendent
+
+* Hold `cmd⌘` or `ctrl` and press left or right arrow key to jump text-marker to beginning or end of a line in a text editor. Can be used in conjunction with `shift`
+
 ### Mac/OSX
 
 * In Chrome webbrowser, to open a link in new window: Hold `cmd⌘` while clicking the link.
@@ -32,3 +36,8 @@ Ability to view size of repository on github in webbrowser before cloning it.
 
 Comes with the installation of git on the computer. Type `gitk` from terminal
 to open working directory as repository in gitk.
+
+#### Dark theme for gitk
+
+[Website](https://draculatheme.com/gitk/)
+[Repository]()
