@@ -28,19 +28,7 @@ Ability to view size of repository on github in webbrowser before cloning it.
 
 ## iTerm (terminal emulator for OSX)
 
-## git-cola (Git gui client)
+## gitk (Gui client)
 
-Lightweight git gui client. Doesn't have all of the big distracting icons and buttons, simply a few windows.
-
-[Repository](https://github.com/git-cola/git-cola)
-
-[Website](https://git-cola.github.io/)
-
-#### Command line tool (Using git-cola from terminal)
-
-From terminal, enter "cola", "git-cola" or "git cola" to access git-cola
-
-To open working directory repository in git-cola:
-
-`cola -r . &`
-
+Comes with the installation of git on the computer. Type `gitk` from terminal
+to open working directory as repository in gitk.
