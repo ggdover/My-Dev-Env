@@ -11,7 +11,7 @@ e.g. .md files, Like this one! :D
 
 ### Mac/OSX
 
-..* In Chrome webbrowser, to open a link in new window: Hold `cmd⌘` while clicking the link.
+* In Chrome webbrowser, to open a link in new window: Hold `cmd⌘` while clicking the link.
 
 ## Google chrome extensions
 
