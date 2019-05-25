@@ -7,6 +7,13 @@ e.g. .md files, Like this one! :D
 #### [Powershell](https://cdn.comparitech.com/wp-content/uploads/2018/08/Comparitech-Powershell-cheatsheet.pdf)
  e.g. .ps1 files, could also be commands to be typed directly in powershell console
 
+## Version control tips and trix
+
+What each branch means in 3-way merge:
+* Left = From/Other branch/Incoming
+* Right = To/Local branch/Destination
+* Base = Where "Left" and "Right" diverged
+
 ## Stand-alone keyboard shortcuts
 
 ### Platform indipendent
