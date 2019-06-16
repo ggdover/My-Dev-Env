@@ -16,13 +16,21 @@ What each branch means in 3-way merge:
 
 ## Stand-alone keyboard shortcuts
 
-### Platform indipendent
+### Platform independent
 
 * Hold `cmd⌘` or `ctrl` and press left or right arrow key to jump text-marker to beginning or end of a line in a text editor. Can be used in conjunction with `shift`
 
 ### Mac/OSX
 
 * In Chrome webbrowser, to open a link in new window: Hold `cmd⌘` while clicking the link.
+
+## Stand-alone command line tricks
+
+* To read command line arguments form a file
+by piping them. For example:
+the argument COMMAND is stored in txt-file namned
+FILE.txt. In the command prompt write:
+>echo < FILE.txt | COMMAND
 
 ## Google chrome extensions
 
