@@ -28,9 +28,11 @@ What each branch means in 3-way merge:
 
 * To read command line arguments form a file
 by piping them. For example:
-the argument COMMAND is stored in txt-file namned
-FILE.txt. In the command prompt write:
->echo < FILE.txt | COMMAND
+the argument ARGS is stored in txt-file namned
+FILE.txt and will be piped to as an argument to the command COMMAND. In the command prompt write:
+```echo < FILE.txt | COMMAND```
+Which will result in:
+```COMMAND ARGS```
 
 ## Google chrome extensions
 
