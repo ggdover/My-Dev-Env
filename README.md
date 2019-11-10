@@ -40,7 +40,11 @@ Which will result in:
 Ability to view size of repository on github in webbrowser before cloning it.
 [Link](https://stackoverflow.com/questions/8646517/see-the-size-of-a-github-repo-before-cloning-it) to stackoverflow thread that guided me to the extension
 
-## Sublime settings
+## Visual code keymaps
+
+### Defaults:
+* Ctrl + Space = Show suggest/auto-complete dropdown menu (OBS! Make sure textmarker is in the right place, next to parentheses or other token)
+
 
 ## Cmder (terminal emulator for Windows)
 
