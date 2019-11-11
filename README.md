@@ -5,7 +5,7 @@
 e.g. .md files, Like this one! :D
 
 #### [Powershell](https://cdn.comparitech.com/wp-content/uploads/2018/08/Comparitech-Powershell-cheatsheet.pdf)
- e.g. .ps1 files, could also be commands to be typed directly in powershell console
+e.g. .ps1 files, could also be commands to be typed directly in powershell console
 
 ## Version control tips and trix
 
@@ -53,6 +53,20 @@ Ability to view size of repository on github in webbrowser before cloning it.
 
 ## iTerm (terminal emulator for OSX)
 
+## Raspberry pi (Raspian)
+
+#### Hotkey/keyboard shortcuts
+
+To resize window ([Source](https://raspberryinsider.com/top-15-raspberry-pi-keyboard-shortcuts/)) = Alt + space (Will give you a dropdown menu with several options to resize window, navigate with arrow keys)
+
+#### GPIO Uart
+
+If GPIO Uart doesn’t work, make sure you add ‘enable_uart=1’ at the bottom in the file ‘/boot/config.txt’ ([Source](https://elinux.org/RPi_Serial_Connection))
+
+#### GPIO pinout/pin-info
+
+Enter ‘pinout’ or if that doesn’t work, try ‘gpio readall’ to get info about each pin on the GPIO (e.g. which one is 5/3.3V, GND, uart, i2c etc. etc.) [Here is also a nice link for info on the GPIO](https://pinout.xyz/) (FYI The link is referenced/mentioned on raspberry pi’s official website)
+
 ## gitk (Gui client)
 
 Comes with the installation of git on the computer. Type `gitk` from terminal
@@ -60,7 +74,7 @@ to open working directory as repository in gitk.
 
 #### Dark theme for gitk
 
-[Website](https://draculatheme.com/gitk/)
+[Website](https://draculatheme.com/gitk/)</br>
 [Repository]()
 
 #### Custom theme
