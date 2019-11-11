@@ -57,7 +57,7 @@ Ability to view size of repository on github in webbrowser before cloning it.
 
 #### Hotkey/keyboard shortcuts
 
-To resize window ([Source](https://raspberryinsider.com/top-15-raspberry-pi-keyboard-shortcuts/)) = Alt + space (Will give you a dropdown menu with several options to resize window, navigate with arrow keys)
+To resize window = Alt + space (Will give you a dropdown menu with several options to resize window, navigate with arrow keys) ([Source](https://raspberryinsider.com/top-15-raspberry-pi-keyboard-shortcuts/))
 
 #### GPIO Uart
 
