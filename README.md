@@ -75,7 +75,7 @@ to open working directory as repository in gitk.
 #### Dark theme for gitk
 
 [Website](https://draculatheme.com/gitk/)</br>
-[Repository]()
+[Repository](https://github.com/dracula/dracula-theme/)
 
 #### Custom theme
 
