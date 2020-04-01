@@ -154,3 +154,12 @@ set geometry(pwsash1) "616 1"
 set geometry(botwidth) 412  
 set geometry(botheight) 638  
 set permviews {}  
+
+## Setting up dev environment on Windows
+
+* Suggested package manager = Chocolatey
+* Suggested terminal to get UNIX commands/tools = Gitbash terminal for windows
+(An alternative is to use WSL (Windows Subsystem for Linux))
+* Install Visual code
+* To move/resize windows, use the WinKey + arrow keys
+* Disable the annoying 'Aero snap' in windows 10 (Whenever you move a window it will sort of float the windows and wait for you to click one window for it to be selected/focused. TODO: add instructions for how to disable it)
