@@ -163,3 +163,5 @@ set permviews {}
 * Install Visual code
 * To move/resize windows, use the WinKey + arrow keys
 * Disable the annoying 'Aero snap' in windows 10 (Whenever you move a window it will sort of float the windows and wait for you to click one window for it to be selected/focused. TODO: add instructions for how to disable it)
+* To change drive in cmd.exe, just type drive-letter followed by ':', so for example 'C:'. In 'Git bash' however, you do 'cd' + space + drive letter, from root, so for example: 'cd /c' or if you're already in root folder simply 'cd c'
+* Check out cscript and wscript to get help on how the script-lingo of cmd.exe works, e.g. options for commands etc. (TODO: What is the difference between wscript and cscript??)
