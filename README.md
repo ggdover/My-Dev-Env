@@ -167,3 +167,6 @@ set permviews {}
 * Check out cscript and wscript to get help on how the script-lingo of cmd.exe works, e.g. options for commands etc. (TODO: What is the difference between wscript and cscript??)
 * To access environment variable in powershell = '$env:' + 'name of environment variable', so for example: "echo $env:PATH"
 * To access environment variable in cmd.exe = '%' + 'name of environment variable' + '%', so for example: "echo %PATH%"
+* Powershell, how to set/append to environment variable, example:
+  * $env:Path = "SomeRandomPath";             (replaces existing path) 
+  * $env:Path += ";SomeRandomPath"            (appends to existing path)
