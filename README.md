@@ -40,6 +40,17 @@ Which will result in:
 Ability to view size of repository on github in webbrowser before cloning it.
 [Link](https://stackoverflow.com/questions/8646517/see-the-size-of-a-github-repo-before-cloning-it) to stackoverflow thread that guided me to the extension
 
+## Sublime keybindings
+
+Copy-paste into "Preference->Key bindings"
+
+```
+[
+	{ "keys": ["ctrl+e"], "command": "toggle_side_bar" },
+	{ "keys": ["alt+z"],  "command": "toggle_setting", "args": {"setting": "word_wrap"}}
+]
+```
+
 ## Visual code keymaps
 
 ### Defaults:
