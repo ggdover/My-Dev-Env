@@ -181,3 +181,18 @@ set permviews {}
 * Powershell, how to set/append to environment variable, example:
   * $env:Path = "SomeRandomPath";             (replaces existing path) 
   * $env:Path += ";SomeRandomPath"            (appends to existing path)
+
+# Virtualbox Tips
+
+## Black screen when making size of screen bigger
+
+Solution might be to simply increase the video memory.</br>
+Shut off your current session of virtualbox guest and increase the video memory significantly.</br>
+Then start guest again and see if it got fixed
+
+## Setup a static ip, so you can ssh from Host OS to Guest OS
+
+The following guide that I wrote for work describes how to do this.
+Can be found in a seperate Markdown file, [click this link](virtualbox_static_ip_guest_and_ssh.md).
+(If the link doesn't work. The file your looking for is in this repository
+ and is namned virtualbox_remote_host_to_guest.md)
