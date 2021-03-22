@@ -1,0 +1,59 @@
+{
+	// http://www.sublimetext.com/docs/3/color_schemes.html
+	"variables": {
+		// "green": "#FF0000",
+	},
+	"globals": {
+		// "foreground": "var(green)",
+	},
+	"rules": [
+		{
+			"scope": "bluego.verb",
+			"foreground": "#22ff22",
+		},
+		{
+			"scope": "bluego.debug",
+			"foreground": "#55bbff",
+		},
+		{
+			"scope": "bluego.info",
+			"foreground": "#ffffff",
+		},
+		{
+			"scope": "bluego.note",
+			"foreground": "#ffffff",
+		},
+		{
+			"scope": "bluego.warn",
+			"foreground": "#f0ff00",
+		},
+		{
+			"scope": "bluego.error",
+			"foreground": "#ff0000",
+		},
+		{
+			"scope": "bluego.fatal",
+			"foreground": "#ffa500",
+		},
+		{
+			"scope": "bluego.hex",
+			"foreground": "#ff66d3",
+		},
+		{
+			"scope": "bluego.numbers",
+			"foreground": "#55bbff",	
+		},
+		{
+			"scope": "bluego.timestamp",
+			"foreground": "#55bbff",
+		},
+		{
+			"scope": "bluego.filename",
+			"foreground": "#55bbff",
+		},
+		{
+			"scope": "bluego.ggd",
+			"foreground": "#22ff22",
+		}
+	],
+}

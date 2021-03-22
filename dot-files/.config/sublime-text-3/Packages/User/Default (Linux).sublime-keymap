@@ -1,0 +1,4 @@
+[
+	{ "keys": ["ctrl+e"], "command": "toggle_side_bar" },
+	{ "keys": ["alt+z"],  "command": "toggle_setting", "args": {"setting": "word_wrap"}}
+]

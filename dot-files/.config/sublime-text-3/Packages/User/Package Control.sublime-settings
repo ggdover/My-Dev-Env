@@ -1,0 +1,17 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"CMake",
+		"DiffView",
+		"Outline",
+		"Package Control",
+		"PackageDev",
+		"PackageResourceViewer",
+		"Protobuf Syntax Hightlighting",
+		"SublimeGDB"
+	]
+}

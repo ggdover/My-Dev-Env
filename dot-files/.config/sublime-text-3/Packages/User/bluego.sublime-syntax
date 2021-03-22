@@ -1,0 +1,34 @@
+%YAML 1.2
+---
+# See http://www.sublimetext.com/docs/3/syntax.html
+#file_extensions:
+#  - ec
+scope: bluego
+file_extensions: [log]
+
+contexts:
+  main:
+    - match: 'VERBOSE'
+      scope: bluego.verb
+    - match: 'DEBUG'
+      scope: bluego.debug
+    - match: 'INFO'
+      scope: bluego.info
+    - match: 'NOTE'
+      scope: bluego.note
+    - match: 'WARN'
+      scope: bluego.warn
+    - match: 'ERROR'
+      scope: bluego.error
+    - match: 'FATAL'
+      scope: bluego.fatal
+    - match: '0(x|X)[0-9a-fA-F:]+'
+      scope: bluego.hex
+    - match: '\d*\.\d*'
+      scope: bluego.timestamp
+    - match: ' [a-zA-Z_]+\.(hpp|cpp|c|h)'
+      scope: bluego.filename
+    - match: '\d+'
+      scope: bluego.numbers
+    - match: 'ggd'
+      scope: bluego.ggd
