@@ -1,4 +1,36 @@
 
+## GDB break when value of variable is changed/read (Setup Watchpoint)
+
+### NOTE following things for any GDB command that takes variable names as input:
+
+* The variable you input to a command needs to be existing in current context.
+  This means that only static and global variables are guaranteed to be accessable
+  at any moment (including before program is started by entering "run").
+  For any other variables, you need to first break through other means
+  (by using a code line breakpoint for example) to first reach a context where the
+  variable is visible/accessable.
+
+  To figure out which variables are accessable you can use:
+  * `info variables` to list all static and global variables.
+  * `info locals` to list variables in current context.
+  
+  You can also append a REGEXP to narrow down which variables to list with
+  these two commands. For example: `info variables instance_` if you're looking
+  for a static/global variable called `instance_`.
+  ( !!NOTE!! in C++ namespace do NOT need to be included for this search )
+
+* For C++ don't forget that the namespaces needs to be included in the name of the variable.
+  So for example, instead of `watch instance_` you have to write something like
+  `watch com::bluego::rpc::ManagerImpl::instance_` for it to work properly.
+
+### Break when value of variable is changed
+
+`watch NAME` (NAME = name of variable)
+
+### Break when value of variable is read
+
+`rwatch NAME` (NAME = name of variable)
+
 ## Cheat sheets
 
 #### [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
