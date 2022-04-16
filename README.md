@@ -228,3 +228,51 @@ The following guide that I wrote for work describes how to do this.
 Can be found in a seperate Markdown file, [click this link](virtualbox_static_ip_guest_and_ssh.md).
 (If the link doesn't work. The file your looking for is in this repository
  and is namned virtualbox_remote_host_to_guest.md)
+
+# Stuff to add to bashrc file
+
+```
+#######################################################################
+########### CUSTOM STUFF ADDED BY ME FROM HERE AND BELOW ##############
+#######################################################################
+
+function findall() {
+  find / -iname $1 2> /dev/null
+}
+
+# Quick way to ensure that you're working with a complete clean repo
+# (Will remove all unstaged and untracked changes)
+alias gitcleanreset="git clean -fdx && git reset --hard"
+
+# Added for ocaml/dune.
+# Without this line here, you would have to run "eval $(opam env)" everytime you 
+# open a new terminal window.
+test -r /home/ggdover/.opam/opam-init/init.sh && . /home/ggdover/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+
+# Adds name of current git branch (if in a git repository) on the prompt
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+export PS1='\033[01;32m\u@\h\033[0m:\033[01;34m\w\033[01;93m$(parse_git_branch)\033[0m\$ '
+```
+* [Link for more tips on how to setup the ANSI color escape codes in the PS1 (the \033xxxm parts)](https://stackoverflow.com/questions/4842424/list-of-ansi-color-escape-sequences)
+* [Link for info on a bug where prompt in PS1 will only update when sourcing bashrc, instead of everytime you hit enter](https://stackoverflow.com/questions/43002375/prompt-updates-git-branch-only-when-sourced)
+
+# Converting multiple files from .doc to .pdf from terminal, on Windows
+
+You need to have libreoffice installed.
+In a gitbash window. Standing in the directory of the doc files you wanna convert run:
+```"C:/Program Files/LibreOffice/program/soffice.exe" --headless --convert-to pdf:writer_pdf_Export *.doc```
+
+# My routine when changing names/format on files for Maxispecialisten
+
+1. (Exekvera i [gitbash](https://gitforwindows.org/#bash)) 
+- Använd libreoffice binären "soffice.exe" för att konvertera från ".doc" till ".pdf".
+
+```"C:/Program Files/LibreOffice/program/soffice.exe" --headless --convert-to pdf:writer_pdf_Export *.doc```
+
+2. (Exekvera i powershell)
+- Ta bort en viss del utav namnet utav alla filer (I detta fall, 
+  delen av fil namnet som är " 2022" byts ut mot "")
+
+```get-childitem *.pdf | foreach { rename-item $_ $_.Name.Replace(" 2022", "") }```
