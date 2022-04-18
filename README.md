@@ -258,6 +258,14 @@ export PS1='\033[01;32m\u@\h\033[0m:\033[01;34m\w\033[01;93m$(parse_git_branch)\
 * [Link for more tips on how to setup the ANSI color escape codes in the PS1 (the \033xxxm parts)](https://stackoverflow.com/questions/4842424/list-of-ansi-color-escape-sequences)
 * [Link for info on a bug where prompt in PS1 will only update when sourcing bashrc, instead of everytime you hit enter](https://stackoverflow.com/questions/43002375/prompt-updates-git-branch-only-when-sourced)
 
+# Why is leading and trailing whitespace removed when I do "echo $VAR" (replace VAR with any name of variable)?
+
+An elaborate answer to this can be found [here](https://unix.stackexchange.com/questions/131766/why-does-my-shell-script-choke-on-whitespace-or-other-special-characters)
+
+In conclusion, it looks like when you do ```$VAR``` leading and trailing
+whitespace is excluded, but if you do ```"$VAR"``` then the whitespace is
+included.
+
 # Converting multiple files from .doc to .pdf from terminal, on Windows
 
 You need to have libreoffice installed.
