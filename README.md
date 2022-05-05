@@ -254,6 +254,19 @@ parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 export PS1='\033[01;32m\u@\h\033[0m:\033[01;34m\w\033[01;93m$(parse_git_branch)\033[0m\$ '
+
+# Always use all 4 cores when running make (Change number after 'j' 
+# if you have more cores) making the build faster
+alias make="make -j4"
+
+# Can be called like: "gitblamefile some_file.c" and it will print the number of lines
+# each agit user have contributed to the file "some_file.c".
+# 
+# This snipper of code was found on this link: 
+# https://stackoverflow.com/questions/42715785/how-do-i-show-statistics-for-authors-contributions-in-git
+gitblamefile() {  
+  git blame -w -M -C -C --line-porcelain $1 | grep -I '^author ' | sort | uniq -ic | sort -nr
+}
 ```
 * [Link for more tips on how to setup the ANSI color escape codes in the PS1 (the \033xxxm parts)](https://stackoverflow.com/questions/4842424/list-of-ansi-color-escape-sequences)
 * [Link for info on a bug where prompt in PS1 will only update when sourcing bashrc, instead of everytime you hit enter](https://stackoverflow.com/questions/43002375/prompt-updates-git-branch-only-when-sourced)
