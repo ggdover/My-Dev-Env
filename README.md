@@ -41,10 +41,29 @@ e.g. .ps1 files, could also be commands to be typed directly in powershell conso
 
 ## Version control tips and trix
 
-What each branch means in 3-way merge:
+#### What each branch means in 3-way merge:
 * Left = From/Other branch/Incoming
 * Right = To/Local branch/Destination
 * Base = Where "Left" and "Right" diverged
+
+#### Check history of git submodule
+
+In order to get a overview of the history, to see
+at which commits in the parent repo that a submodule
+was updated to point to a more recent commit
+(For example, in grpc repository you want to see
+at what commits it's submodule "protobuf" was 
+updated to point to a more recent version of
+protobuf.)
+
+`git log <path to submodule folder>`
+or
+`gitk <path to submodule folder>`
+
+To get `git log` or `gitk` of the submodule repo,
+ìnstead you need to change current directory to that
+`cd <path to submodule folder>` and then do
+`git log` or `gitk .`
 
 ## Stand-alone keyboard shortcuts
 
