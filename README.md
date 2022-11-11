@@ -316,3 +316,39 @@ In a gitbash window. Standing in the directory of the doc files you wanna conver
   delen av fil namnet som är " 2022" byts ut mot "")
 
 ```get-childitem *.pdf | foreach { rename-item $_ $_.Name.Replace(" 2022", "") }```
+
+# Github and Personal Access token
+
+On 13 August 2021 Github removed the ability to authenticate using password, so if you
+try to push commits and authenticate with just username + password you'll see this:
+
+```
+ggdover@ggdover-vb:~/repos/brainfuck_ocaml/brainfuck_ocaml$ git remote add origin https://github.com/ggdover/brainfuck_ocaml.git
+ggdover@ggdover-vb:~/repos/brainfuck_ocaml/brainfuck_ocaml$ git push origin master
+Username for 'https://github.com': ggdover
+Password for 'https://ggdover@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+```
+
+There are 2 alternatives to this. Using ([SSH-key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)) or a ([Personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token))
+
+If you use personal access token, there is a trick to include the personal access token in the remote-url so you never have to enter
+it when pushing commits. So when adding the remote-url to your git repo before pushing to github follow this format:
+
+```git remote origin add https://<USERNAME>:<PERSONAL ACCESS TOKEN>@github.com/ggdover/brainfuck_ocaml.git```
+
+Then as a result you will be able to push without entering any password or personal access token:
+
+```
+ggdover@ggdover-vb:~/repos/brainfuck_ocaml/brainfuck_ocaml$ git push origin master
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (10/10), 905 bytes | 905.00 KiB/s, done.
+Total 10 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/ggdover/brainfuck_ocaml.git
+ * [new branch]      master -> master
+```
+
+([Found this tip on this Stackoverflow thread](https://stackoverflow.com/questions/18935539/authenticate-with-github-using-a-token))
