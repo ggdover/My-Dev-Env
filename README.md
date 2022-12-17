@@ -248,6 +248,22 @@ Can be found in a seperate Markdown file, [click this link](virtualbox_static_ip
 (If the link doesn't work. The file your looking for is in this repository
  and is namned virtualbox_remote_host_to_guest.md)
 
+# bash tips
+
+## Check if path is already added to PATH before adding
+
+Here is how to check whether a filepath 
+already exists in the PATH environment variable, before adding it
+(export) so you can avoid duplicates, for example if you
+run ```source ~/.bashrc``` after making a change in your ```~/.bashrc``` file.
+
+In this example, the path we are looking to add is ```${HOME}/gn```
+```
+if ! echo "$PATH" | grep -q "${HOME}/gn" ; then 
+    export PATH=${HOME}/gn:"$PATH"
+fi
+```
+
 # Stuff to add to bashrc file
 
 ```
