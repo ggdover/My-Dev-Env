@@ -288,7 +288,7 @@ test -r /home/ggdover/.opam/opam-init/init.sh && . /home/ggdover/.opam/opam-init
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
-export PS1='\033[01;32m\u@\h\033[0m:\033[01;34m\w\033[01;93m$(parse_git_branch)\033[0m\$ '
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\033[01;93m\]$(parse_git_branch)\[\033[0m\]$ '
 
 # Always use all 4 cores when running make (Change number after 'j' 
 # if you have more cores) making the build faster
