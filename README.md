@@ -368,3 +368,24 @@ To https://github.com/ggdover/brainfuck_ocaml.git
 ```
 
 ([Found this tip on this Stackoverflow thread](https://stackoverflow.com/questions/18935539/authenticate-with-github-using-a-token))
+
+# AOSP (Android and Android Open Source Project stuff)
+
+## Logging in .rc file
+
+The following line can be used to make a log from .rc file appear in logcat as you
+run `adb logcat` later on (You can even use `adb logcat -s mytag` to filter on the tag):
+```
+exec u:r:shell:s0 -- /system/bin/log -p i -t mytag "Hello this is my log..."
+```
+
+## Struggling with permissions in .rc file
+
+Some different lines that can help you when you're struggling with having right
+permissions on a file, you can adjust this from .rc file with these lines:
+```
+# Adjust SELinux policy on the file
+exec u:r:su:s0 -- /system/bin/chcon -R u:object_r:app_data_file:s0 /data/myfile.txt
+# Adjust file permission
+exec u:object_r:system_file:s0 -- /system/bin/chmod 755 /data/myfile.txt
+```
