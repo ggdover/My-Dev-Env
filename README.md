@@ -385,7 +385,10 @@ Some different lines that can help you when you're struggling with having right
 permissions on a file, you can adjust this from .rc file with these lines:
 ```
 # Adjust SELinux policy on the file
-exec u:r:su:s0 -- /system/bin/chcon -R u:object_r:app_data_file:s0 /data/myfile.txt
+exec u:r:su:s0 -- /system/bin/chcon -R u:object_r:app_data_file:s0 /data/mydir/mysubdir/myfile.txt
 # Adjust file permission
-exec u:object_r:system_file:s0 -- /system/bin/chmod 755 /data/myfile.txt
+exec u:object_r:system_file:s0 -- /system/bin/chmod 755 /data/mydir/mysubdir/myfile.txt
+# If we're creating a directory (potentially with sub-directories) and setting permission at the same time
+mkdir /data/mydir/ 0775 root system
+mkdir /data/mydir/mysubdir 0775 root system
 ```
