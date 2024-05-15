@@ -302,6 +302,17 @@ alias make="make -j4"
 gitblamefile() {  
   git blame -w -M -C -C --line-porcelain $1 | grep -I '^author ' | sort | uniq -ic | sort -nr
 }
+
+# For working with AOSP workspace
+# alias to use to find occurances of a specific keyword over the whole of aosp workspace
+# (excluding certain directories)
+# The wrapping parenthesis makes sure it's all executed in a subshell
+# so that the initial "cd" don't end up changing the directory your in after command has finished,
+# but only to do it temporarily so the "exclude-dir" param targets the corrects dirs
+# (The --exclude-dir param in grep command don't support paths but just file/dir names, thats why)
+function aosp_grep() {
+  (cd ~/aosp && grep -rn --exclude-dir={.repo,out,prebuilt} $1 .)
+}
 ```
 * [Link for more tips on how to setup the ANSI color escape codes in the PS1 (the \033xxxm parts)](https://stackoverflow.com/questions/4842424/list-of-ansi-color-escape-sequences)
 * [Link for info on a bug where prompt in PS1 will only update when sourcing bashrc, instead of everytime you hit enter](https://stackoverflow.com/questions/43002375/prompt-updates-git-branch-only-when-sourced)
